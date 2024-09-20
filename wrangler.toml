@@ -1,0 +1,24 @@
+name = "react-ppr-workers"
+main = "src/server/index.tsx"
+compatibility_date = "2024-09-09"
+compatibility_flags = ["nodejs_compat_v2"]
+
+legacy_assets = "public"
+
+## soon to be replaced with - 
+# experimental_assets = { directory = "public" }
+
+[build]
+command = "npm run build:css && npm run build:js"
+
+[[durable_objects.bindings]]
+name = "ReactServer"
+class_name = "ReactServer"
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = ["ReactServer"]
+
+# [[analytics_engine_datasets]]
+# binding = "analytics"
+# dataset = CHANGE_ME
