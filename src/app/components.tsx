@@ -19,6 +19,9 @@ export function Pokemon({ id, name }: PokemonProps) {
   return (
     <li className="flex flex-col items-center justify-center border bg-white border-gray-400 dark:bg-gray-700 dark:border-gray-500 p-3">
       <img
+        style={{
+          imageRendering: 'pixelated',
+        }}
         width={96}
         height={96}
         alt={name}
