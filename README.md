@@ -1,12 +1,8 @@
 ## A boilerplate for Sunil's experiments.
 
-(wip)
+TODO:
 
-- Typescript
-- Cloudflare Workers
-- React / ReactDOM
-  - Streaming SSR
-  - Hot reload
-- Session Servers with PartyServer
-- TailwindCSS
-- ESLint
+- instructions on setting up database
+- client bundle
+- inlining data
+- minify all bundles
