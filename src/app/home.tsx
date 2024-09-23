@@ -30,6 +30,15 @@ export default function Home(props: { children: React.ReactNode }) {
           >
             Source
           </a>
+          ). (
+          <a
+            className="underline"
+            target="_blank"
+            href="https://sunilpai.dev/posts/ppr-for-everyone/"
+            rel="noreferrer"
+          >
+            Blogpost
+          </a>
           )
         </p>
         {props.children}
