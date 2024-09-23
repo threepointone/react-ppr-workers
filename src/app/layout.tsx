@@ -27,10 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* todo: add inter font */}
+      <meta charSet="utf-8" />
       <link rel="stylesheet" href="/dist/styles.css" />
       <body>
         <div id="root">{children}</div>
       </body>
+      <script src="/dist/index.js" />
     </html>
   );
 }

@@ -4,8 +4,8 @@ import { suspend } from 'suspend-react';
 import { Pokemon, PokemonList } from './components';
 
 declare const IS_PRERENDER: boolean | undefined;
-
-export default function List({ DB }: { DB: D1Database }) {
+declare const IS_CLIENT: boolean | undefined;
+export default function List({ DB }: { DB?: D1Database }) {
   // eslint-disable-next-line unicorn/no-typeof-undefined
   if (typeof IS_PRERENDER !== 'undefined' && IS_PRERENDER) {
     // TODO: trigger this automatically if any i/o is made
@@ -16,6 +16,14 @@ export default function List({ DB }: { DB: D1Database }) {
     if (typeof window !== 'undefined') {
       // @ts-expect-error we've inlined the data in the component
       return window.__data;
+    }
+
+    if (!DB) {
+      throw new Error('DB is not defined');
+    }
+
+    if (IS_CLIENT) {
+      throw new Error("Shouldn't reach this code on the client");
     }
 
     const { results } = await DB.prepare(
@@ -39,7 +47,7 @@ export default function List({ DB }: { DB: D1Database }) {
       <script
         dangerouslySetInnerHTML={{
           __html: `
-        window.__data = ${JSON.stringify(results.rows)};
+        window.__data = ${JSON.stringify(results)};
         `,
         }}
       />

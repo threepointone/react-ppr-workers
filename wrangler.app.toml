@@ -10,9 +10,10 @@ legacy_assets = "./public"
 command = "npm run build:css && npm run build:js"
 
 [[d1_databases]]
-binding = "DB" # i.e. available in your Worker on env.DB
+binding = "DB"
 database_name = "pokemon"
 database_id = "1bea6938-8777-4864-a72e-f5fa2179411f"
 
 [define]
 IS_PRERENDER = "false"
+IS_CLIENT = "false"

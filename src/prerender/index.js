@@ -3,7 +3,7 @@ import { unstable_dev } from 'wrangler';
 
 const worker = await unstable_dev('./src/server/app.tsx', {
   config: 'wrangler.app.toml',
-  define: ['IS_PRERENDER:true'],
+  define: ['IS_PRERENDER:true', 'process.env.NODE_ENV:"production"'],
 });
 
 try {

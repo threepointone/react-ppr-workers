@@ -48,7 +48,7 @@ function toWebReadableStream(pipeableStream: Stream) {
 }
 
 const headers = {
-  'Content-Type': 'text/html',
+  'Content-Type': 'text/html; charset=utf-8',
   'content-encoding': 'identity',
   'Transfer-Encoding': 'chunked',
   // set caching header so it never caches

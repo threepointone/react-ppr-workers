@@ -4,7 +4,7 @@ import Layout from './layout';
 import List from './list';
 import Loading from './loading';
 
-export default function App({ DB }: { DB: D1Database }) {
+export default function App({ DB }: { DB?: D1Database }) {
   return (
     <Layout>
       <Suspense fallback={<Loading />}>
