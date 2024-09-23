@@ -46,6 +46,25 @@ export default function Home(props: { children: React.ReactNode }) {
           PokeAPI
         </a>{' '}
         – Pokemon is © 1996-2023 Nintendo, Creatures, Inc., GAME FREAK
+        <br />
+        <a
+          href="https://github.com/rauchg/how-is-this-not-illegal"
+          target="_blank"
+          className="underline"
+          rel="noreferrer"
+        >
+          Based on this repo by @rauchg
+        </a>
+        <br />
+        Forked by me,{' '}
+        <a
+          href="https://twitter.com/threepointone/"
+          target="_blank"
+          className="underline"
+          rel="noreferrer"
+        >
+          Sunil Pai
+        </a>
       </footer>
     </>
   );

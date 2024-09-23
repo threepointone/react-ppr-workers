@@ -6,6 +6,9 @@ compatibility_flags = ["nodejs_compat_v2"]
 # experimental_assets = {directory = "public"}
 legacy_assets = "./public"
 
+[placement]
+mode = "smart"
+
 [build]
 command = "npm run build:css && npm run build:js"
 
