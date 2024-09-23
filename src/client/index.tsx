@@ -6,11 +6,11 @@ import Loading from '../app/loading';
 
 function App({ DB }: { DB?: D1Database }) {
   return (
-    <Suspense fallback={<Loading />}>
-      <Home>
+    <Home>
+      <Suspense fallback={<Loading />}>
         <List DB={DB} />
-      </Home>
-    </Suspense>
+      </Suspense>
+    </Home>
   );
 }
 

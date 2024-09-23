@@ -7,11 +7,11 @@ import Loading from './loading';
 export default function App({ DB }: { DB?: D1Database }) {
   return (
     <Layout>
-      <Suspense fallback={<Loading />}>
-        <Home>
+      <Home>
+        <Suspense fallback={<Loading />}>
           <List DB={DB} />
-        </Home>
-      </Suspense>
+        </Suspense>
+      </Home>
     </Layout>
   );
 }

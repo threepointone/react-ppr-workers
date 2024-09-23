@@ -15,7 +15,7 @@ This is a demo of a React app that implements partial prerendering with React an
 
 - `npm install`
 - Setup a "pokemon" database on [Cloudflare D1](https://developers.cloudflare.com/d1/get-started/) with [`init.sql`](./init.sql)
-- `npm start` to run the dev server
+- `npm start` to run the dev server(s)
 - `npm run deploy` to deploy to Cloudflare Workers
 
 ### Credit

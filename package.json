@@ -23,7 +23,7 @@
     "dev:app": "wrangler dev -c wrangler.app.toml",
     "dev:eyeball": "wrangler dev -c wrangler.eyeball.toml",
     "prerender": "node ./src/prerender/index.js",
-    "start": "npm run prerender && concurrently \"npm run dev:eyeball\" \"sleep 2 && npm run dev:app\""
+    "start": "npm run prerender && concurrently \"npm run dev:eyeball\" \"sleep 1 && npm run dev:app\""
   },
   "dependencies": {
     "esbuild": "^0.23.1",

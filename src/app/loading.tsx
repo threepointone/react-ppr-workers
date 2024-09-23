@@ -6,7 +6,7 @@ export default function Load() {
           key={i}
           className="flex flex-col items-center justify-center border bg-white border-gray-400 dark:bg-gray-700 dark:border-gray-500 p-3"
         >
-          <div style={{ width: 96, height: 96 }} />
+          <div style={{ width: 96, height: 96 }} className="loader" />
           <span aria-hidden className="invisible">
             Loading
           </span>
