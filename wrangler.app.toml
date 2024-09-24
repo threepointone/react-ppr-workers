@@ -9,6 +9,12 @@ legacy_assets = "./public"
 [placement]
 mode = "smart"
 
+workers_dev = true
+
+routes = [
+  {pattern = "react-ppr-workers-app.sunilpai.dev", custom_domain = true }
+]
+
 [build]
 command = "npm run build:css && npm run build:js"
 

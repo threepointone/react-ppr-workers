@@ -39,6 +39,7 @@ export default {
           ...Object.entries(headers),
           ['Link', '</dist/styles.css>; rel=preload; as=style'],
           ['Link', '</dist/index.js>; rel=preload; as=script; crossorigin'],
+          ['Link', '<https://raw.githubusercontent.com>; rel=preconnect'],
         ],
       },
     );
