@@ -41,7 +41,7 @@ export default function RootLayout({
       <body>
         <div id="root">{children}</div>
       </body>
-      <script src="/dist/index.js" />
+      <script src="/dist/index.js" type="module" />
     </html>
   );
 }

@@ -15,7 +15,7 @@
   "author": "Sunil Pai <threepointone@gmail.com>",
   "type": "module",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/app/styles.css -o ./public/dist/styles.css",
+    "build:css": "tailwindcss -i ./src/app/styles.css -o ./public/dist/styles.css --minify",
     "build:js": "esbuild ./src/client/index.tsx --bundle --minify --outdir=./public/dist --format=esm --platform=browser --define:IS_CLIENT='\"true\"'",
     "deploy": "npm run prerender && npm run deploy:app && npm run deploy:eyeball",
     "deploy:app": "wrangler deploy -c wrangler.app.toml --define process.env.NODE_ENV:'\"production\"'",
